@@ -1,0 +1,127 @@
+#N canvas 1002 448 772 623 12;
+#X obj 248 158 osc~;
+#X obj 248 205 *~ 1;
+#X obj 274 183 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.433071 256;
+#X obj 273 131 r ph;
+#X obj 394 534 s ph;
+#X obj 394 513 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 248 104 * 2;
+#X obj 335 158 osc~;
+#X obj 335 205 *~ 1;
+#X obj 361 183 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.472441 256;
+#X obj 360 131 r ph;
+#X obj 423 158 osc~;
+#X obj 423 205 *~ 1;
+#X obj 449 183 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.362205 256;
+#X obj 448 131 r ph;
+#X obj 510 158 osc~;
+#X obj 510 205 *~ 1;
+#X obj 536 183 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.149606 256;
+#X obj 535 131 r ph;
+#X obj 598 158 osc~;
+#X obj 598 205 *~ 1;
+#X obj 624 183 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.00787402 256;
+#X obj 623 131 r ph;
+#X obj 335 104 * 3;
+#X obj 423 104 * 4;
+#X obj 510 104 * 5;
+#X obj 598 104 * 6;
+#X text 456 510 Imposta la stessa fase;
+#X text 457 533 per tutti gli oscillatori;
+#X obj 108 30 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 440 256;
+#X obj 108 158 osc~;
+#X obj 108 205 *~ 1;
+#X obj 134 183 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#X obj 133 131 r ph;
+#X text 10 158 Fondamentale;
+#X obj 246 232 cnv 15 400 5 empty empty empty 20 12 0 14 -258113 -66577
+0;
+#X obj 248 272 +~;
+#X obj 248 311 +~;
+#X obj 248 350 +~;
+#X obj 248 389 +~;
+#X text 574 241 Armoniche 2-6;
+#X obj 293 390 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 317 389 attiva-disattiva armoniche;
+#X obj 111 460 +~;
+#X obj 111 546 *~;
+#X obj 111 575 dac~;
+#X msg 181 486 \$1 20;
+#X obj 181 464 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 181 510 line~;
+#X obj 248 423 *~ 0;
+#X obj 309 45 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 5500 1;
+#X obj 399 45 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6000 1;
+#X obj 484 45 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 4600 1;
+#X obj 571 45 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 1900 1;
+#X obj 669 45 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 100 1;
+#X obj 111 501 *~ 0.16;
+#X connect 0 0 1 0;
+#X connect 1 0 36 0;
+#X connect 2 0 1 1;
+#X connect 3 0 0 1;
+#X connect 5 0 4 0;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 8 0 36 1;
+#X connect 9 0 8 1;
+#X connect 10 0 7 1;
+#X connect 11 0 12 0;
+#X connect 12 0 37 1;
+#X connect 13 0 12 1;
+#X connect 14 0 11 1;
+#X connect 15 0 16 0;
+#X connect 16 0 38 1;
+#X connect 17 0 16 1;
+#X connect 18 0 15 1;
+#X connect 19 0 20 0;
+#X connect 20 0 39 1;
+#X connect 21 0 20 1;
+#X connect 22 0 19 1;
+#X connect 23 0 7 0;
+#X connect 24 0 11 0;
+#X connect 25 0 15 0;
+#X connect 26 0 19 0;
+#X connect 29 0 30 0;
+#X connect 29 0 6 0;
+#X connect 29 0 23 0;
+#X connect 29 0 24 0;
+#X connect 29 0 25 0;
+#X connect 29 0 26 0;
+#X connect 30 0 31 0;
+#X connect 31 0 43 0;
+#X connect 32 0 31 1;
+#X connect 33 0 30 1;
+#X connect 36 0 37 0;
+#X connect 37 0 38 0;
+#X connect 38 0 39 0;
+#X connect 39 0 49 0;
+#X connect 41 0 49 1;
+#X connect 43 0 55 0;
+#X connect 44 0 45 0;
+#X connect 44 0 45 1;
+#X connect 46 0 48 0;
+#X connect 47 0 46 0;
+#X connect 48 0 44 1;
+#X connect 49 0 43 1;
+#X connect 50 0 2 0;
+#X connect 51 0 9 0;
+#X connect 52 0 13 0;
+#X connect 53 0 17 0;
+#X connect 54 0 21 0;
+#X connect 55 0 44 0;
