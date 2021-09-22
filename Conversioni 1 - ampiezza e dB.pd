@@ -1,0 +1,44 @@
+#N canvas 870 265 1013 408 12;
+#X obj 64 149 expr 20*log10($f1/$f2);
+#X obj 183 88 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 183 114 t b i;
+#X obj 64 118 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 64 190 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 64 90 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 61 57 Conversione ampiezza (picco)- dB;
+#X obj 491 114 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 490 142 expr 0.5*(pow(2 \, $i1));
+#X obj 490 174 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 490 231 expr 1/$f1;
+#X obj 490 198 t b f;
+#X obj 490 262 print expr;
+#X text 577 264 A 16 bit il valore di ampiezza minimo è 3.05176e-05
+;
+#X text 488 57 Profondità di bit e numero di valori disponibili per
+discretizzare l'ampiezza. Il valore minimo è inviato alla console
+di PD.;
+#X text 60 209 Se impostiamo il valore $f2 sul valore minimo (0.00003
+a 16 bit) otteniamo la gamma dinamica.;
+#X text 59 255 Se impostiamo $f2 a 1 per convenzione \, i valori in
+dB si muoveranno da 0dB ("zero digitale" \, valore massimo esprimibile
+dal convertitore) a meno infinito.;
+#X text 324 344 NB La divisione per log10(2) è un espediente di calcolo
+per ottenere log2;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 2 1 0 1;
+#X connect 3 0 0 0;
+#X connect 5 0 3 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 11 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 11 1 10 0;

@@ -1,0 +1,55 @@
+#N canvas 947 358 996 525 12;
+#X obj 60 81 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 446 256;
+#X obj 60 110 ftom;
+#X obj 136 110 expr 69+(12*(log10($f1/440)/log10(2)));
+#X obj 60 144 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 69.2345 256;
+#X obj 136 144 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 69.2345 256;
+#X text 133 164 L'espressione effettua lo stesso calcolo delo modulo
+ftom;
+#X obj 492 82 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 69 256;
+#X obj 492 145 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 440 256;
+#X obj 568 145 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 440 256;
+#X text 488 50 Conversione pitch (MIDI) a frequenza;
+#X text 56 49 Conversione da frequenza a pitch (MIDI);
+#X obj 492 111 mtof;
+#X text 567 165 L'espressione effettua lo stesso calcolo delo modulo
+mtof;
+#X obj 568 111 expr 440*pow(2 \, ($f1-69)/12);
+#X text 57 246 Differenza in cents fra due frequenze;
+#X obj 61 307 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 300 256;
+#X obj 200 308 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 200 256;
+#X obj 62 375 expr 1200*(log10($f1/$f2)/log10(2));
+#X obj 200 336 t b f;
+#X obj 61 280 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 62 406 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 701.955 256;
+#X text 140 403 NB Solo l'inlet sinistro di expr riceve provoca l'emissione
+del risultato. Per ottenere il risultato al cambio del valore $f2 (inlet
+destro) occorre un modulo trigger che prima invia il numero all'espressione
+e poi forza il calcolo.;
+#X text 421 250 NB La divisione per log10(2) (logaritmo in base 10
+di 2) è un espediente di calcolo per ottenere log2 (logaritmo in base
+2);
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 6 0 11 0;
+#X connect 6 0 13 0;
+#X connect 11 0 7 0;
+#X connect 13 0 8 0;
+#X connect 15 0 17 0;
+#X connect 16 0 18 0;
+#X connect 17 0 20 0;
+#X connect 18 0 19 0;
+#X connect 18 1 17 1;
+#X connect 19 0 15 0;
