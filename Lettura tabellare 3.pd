@@ -1,0 +1,92 @@
+#N canvas 1018 535 1113 713 12;
+#X obj 430 89 openpanel;
+#X obj 430 149 soundfiler;
+#X obj 430 63 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 603 87 openpanel;
+#X obj 603 147 soundfiler;
+#X obj 603 61 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 430 331 phasor~;
+#X obj 430 276 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.00808759 256;
+#X obj 430 301 *~ 1;
+#X obj 502 276 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#X obj 430 179 expr 44100/$f1;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array array1 5.4528e+06 float 2;
+#X coords 0 1 5.4528e+06 -1 200 140 1;
+#X restore 37 60 graph;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array array2 4.32538e+06 float 2;
+#X coords 0 1 4.32538e+06 -1 200 140 1;
+#X restore 37 234 graph;
+#X obj 430 419 tabread~ array1;
+#X obj 606 416 tabread~ array2;
+#X obj 430 361 *~;
+#X obj 605 382 *~;
+#X obj 605 332 phasor~;
+#X obj 605 277 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.0101956 256;
+#X obj 605 302 *~ 1;
+#X obj 680 274 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#X obj 603 182 expr 44100/$f1;
+#X obj 606 482 -~;
+#X obj 698 453 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 695 486 sig~;
+#X obj 427 655 dac~;
+#X msg 430 119 read -resize \$1 array1;
+#X msg 603 117 read -resize \$1 array2;
+#X obj 606 527 *~;
+#X obj 431 575 +~;
+#X text 36 401 LETTURA TABELLARE;
+#X text 36 425 Questo algoritmo implementa l'equazione 7) della dispensa
+2 con una differenza rispetto al diagramma di flusso ivi rappresentato.
+;
+#X text 36 488 Nel diagramma della dispensa lo stesso fasore legge
+entrambe le tabelle. Qui si usano due fasori per preservare le frequenze
+specifiche legate alla durata di ciascun file caricato in tabella.
+L'outlet destro di [soundfiler] rilascia la durata N della tabella
+in campioni \, che va sia nel calcolo della frequenza di lettura per
+inc = 1 (lettura del file così com'è) sia a moltiplicare il fasore.
+;
+#X text 693 513 Segnale continuo variabile da 0 a 1 Potrebbe essere
+controllato con una modwheel o un fader.;
+#X text 674 302 Questa moltiplicazione serve a variare la frequenza
+di lettura senza intervenire sulla frequenza base (inc = 1);
+#X text 707 146 Il flag -resize forza la lunghezza del buffer su quella
+del file caricato.;
+#X connect 0 0 26 0;
+#X connect 1 0 10 0;
+#X connect 1 0 15 1;
+#X connect 2 0 0 0;
+#X connect 3 0 27 0;
+#X connect 4 0 21 0;
+#X connect 4 0 16 1;
+#X connect 5 0 3 0;
+#X connect 6 0 15 0;
+#X connect 7 0 8 0;
+#X connect 8 0 6 0;
+#X connect 9 0 8 1;
+#X connect 10 0 7 0;
+#X connect 13 0 22 1;
+#X connect 13 0 29 0;
+#X connect 14 0 22 0;
+#X connect 15 0 13 0;
+#X connect 16 0 14 0;
+#X connect 17 0 16 0;
+#X connect 18 0 19 0;
+#X connect 19 0 17 0;
+#X connect 20 0 19 1;
+#X connect 21 0 18 0;
+#X connect 22 0 28 0;
+#X connect 23 0 24 0;
+#X connect 24 0 28 1;
+#X connect 26 0 1 0;
+#X connect 27 0 4 0;
+#X connect 28 0 29 1;
+#X connect 29 0 25 0;
+#X connect 29 0 25 1;
