@@ -1,0 +1,151 @@
+#N canvas 640 306 1400 794 12;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array array3 131 float 3;
+#A 0 -0.068547 0 0.068547 0.136046 0.201469 0.263827 0.322186 0.375688
+0.423564 0.465149 0.499893 0.527373 0.547294 0.559502 0.563976 0.560836
+0.550332 0.532843 0.508864 0.478998 0.443939 0.404464 0.361407 0.315652
+0.268107 0.219689 0.171305 0.123836 0.0781171 0.0349222 -0.00504874
+-0.0411839 -0.0729697 -0.0999993 -0.121979 -0.13873 -0.150192 -0.15642
+-0.157582 -0.15395 -0.145893 -0.133866 -0.1184 -0.100084 -0.0795549
+-0.0574777 -0.0345324 -0.0113965 0.0112704 0.0328419 0.0527388 0.0704423
+0.0855052 0.0975615 0.106334 0.111638 0.113388 0.111596 0.106368 0.0979033
+0.0864882 0.072486 0.0563281 0.0385021 0.0195395 1.06144e-06 -0.0195374
+-0.0385001 -0.0563262 -0.0724844 -0.0864868 -0.0979022 -0.106367 -0.111595
+-0.113388 -0.111639 -0.106334 -0.0975626 -0.0855067 -0.0704441 -0.0527408
+-0.0328441 -0.0112728 0.011394 0.0345299 0.0574753 0.0795526 0.100082
+0.118398 0.133865 0.145892 0.153949 0.157582 0.156421 0.150193 0.138731
+0.121981 0.100002 0.0729729 0.0411876 0.00505286 -0.0349177 -0.0781123
+-0.123831 -0.1713 -0.219684 -0.268102 -0.315647 -0.361403 -0.404459
+-0.443935 -0.478994 -0.508861 -0.532841 -0.550331 -0.560835 -0.563976
+-0.559503 -0.547296 -0.527375 -0.499897 -0.465153 -0.423569 -0.375693
+-0.322192 -0.263833 -0.201476 -0.136053 -0.0685544 -7.43005e-06 0.0685396
+;
+#X coords 0 1 131 -1 200 140 1 0 0;
+#X restore 58 60 graph;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array array4 1280 float 3;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#A 1000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 1 1280 -1 1280 140 1 0 0;
+#X restore 58 584 graph;
+#X obj 342 146 phasor~;
+#X floatatom 342 59 5 0 0 0 - - -;
+#X obj 343 266 *~;
+#X obj 965 501 tabwrite~ array4;
+#X obj 937 465 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 478 181 line~;
+#X obj 478 154 pack 0 50;
+#X floatatom 478 95 5 0 0 0 - - -;
+#X obj 478 229 +~ 128;
+#X obj 343 293 +~ 1;
+#X obj 936 416 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 937 439 metro 128;
+#X floatatom 1012 413 5 0 0 0 - - -;
+#X obj 365 462 dac~;
+#X obj 365 434 *~;
+#X obj 393 413 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 534 230 N = 128 (dimensioni della tabella);
+#X text 391 266 Il fasore deve essere riscalato da 0-1 a 0-(N-1)...
+;
+#X text 1070 397 Il blocco "metro" forza la visualizzazione del segnale
+nella tabella array4 aggiornandola con un periodo in millisecondi variabile.
+Provate differenti valori...;
+#X text 417 412 Mute;
+#X text 560 88 Questo valore S ("squeeze") introduce un certo numero
+di campioni di "fermo" nella lettura della tabella (Osservate il grafico
+al variare di S).;
+#X text 522 93 S;
+#X obj 343 368 tabread4~ array3;
+#X obj 1025 178 dac~;
+#X obj 1025 150 *~;
+#X obj 1053 129 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text 1077 128 Mute;
+#X obj 1026 94 tabosc4~ array3;
+#X text 474 363 [tabread4~] è una versione a 4 punti di interpolazione
+di [tabread~] Le tabelle usate con questo tipo di interpolazione devono
+avere un numero di punti pari a 3+2^n (in questo caso 131);
+#X floatatom 1027 55 5 0 0 0 - - -;
+#X text 560 145 Il blocco "line~" serve di solito a smussare un cambio
+di valore. [pack x 50] significa che il cambio del valore destinato
+in questo caso a [line~] avviene con una rampa in 50ms anziché di
+colpo \, evitando o limitando in questo modo click e artefatti vari.
+;
+#X text 395 283 ...e successivamente aumentato di 1 per aggiungere
+in testa alla tabella uno dei 4 "guard-point" richiesti da [tabosc4~]
+e da [tabread4~]. In questo caso la tabella viene letta dal punto 1
+al 129 \, anche se l'array ha indici da 0 a 131;
+#X text 1074 157 [tabosc4~]fa lo stesso lavoro dell'algoritmo precedente
+\, ma senza la possibilità dello "squeeze";
+#X msg 57 242 \; array3 sinesum 128 0.15 0.25 0.25 \;;
+#X text 54 284 Un tipo particolare di messaggio in PD contenente uno
+script. Esegue i metodi (funzioni) di alcuni oggetti. In questo caso
+\, scrive nella tabella array3 una somma di sinusoidi pesate. Provate
+a cambiare i "pesi" (cioèi valori di ampiezza delle parziali) per
+vedere come cambia la forma d'onda e il suono risultante. Il primo
+argomento è la dimensione della tabella (128 in questo caso) In alternativa
+\, potete disegnare direttamente la tabella con il mouse.;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 3 0 31 0;
+#X connect 4 0 11 0;
+#X connect 6 0 5 0;
+#X connect 7 0 10 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 4 1;
+#X connect 11 0 24 0;
+#X connect 12 0 13 0;
+#X connect 13 0 6 0;
+#X connect 14 0 13 1;
+#X connect 16 0 15 0;
+#X connect 16 0 15 1;
+#X connect 16 0 5 0;
+#X connect 17 0 16 1;
+#X connect 24 0 16 0;
+#X connect 26 0 25 0;
+#X connect 26 0 25 1;
+#X connect 26 0 5 0;
+#X connect 27 0 26 1;
+#X connect 29 0 26 0;
+#X connect 31 0 29 0;
