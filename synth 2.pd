@@ -1,0 +1,152 @@
+#N canvas 678 197 1643 1048 12;
+#X obj 64 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 64 66 openpanel;
+#X obj 64 126 soundfiler;
+#X obj 301 187 expr 44100/$f1;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array waveTable1 353112 float 2;
+#X coords 0 1 353112 -1 200 140 1 0 0;
+#X restore 264 40 graph;
+#X obj 407 578 *~;
+#X obj 408 459 phasor~;
+#X obj 751 977 dac~;
+#X floatatom 407 401 5 0 0 0 - - -;
+#X obj 404 314 float;
+#X obj 568 578 *~;
+#X obj 568 538 wrap~;
+#X floatatom 608 459 5 0 0 0 - - -;
+#X obj 568 465 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 405 281 t b f;
+#X obj 407 368 expr $f1*pow(pow(2 \, 1.0/12.0) \, ($f2-62));
+#X msg 463 402 0;
+#X obj 407 608 tabread~ waveTable1;
+#X obj 567 608 tabread~ waveTable1;
+#X msg 64 96 read -resize \$1 waveTable1;
+#X obj 503 647 +~;
+#X obj 754 936 *~;
+#X obj 1099 580 *~;
+#X obj 1099 540 wrap~;
+#X floatatom 1138 471 5 0 0 0 - - -;
+#X obj 1098 477 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1098 610 tabread~ waveTable2;
+#X obj 938 609 tabread~ waveTable2;
+#X obj 937 579 *~;
+#X floatatom 794 702 5 0 0 0 - - -;
+#X obj 794 676 ctlin;
+#X obj 794 727 /~ 127;
+#X obj 647 24 notein, f 13;
+#X obj 701 76 select 0, f 24;
+#X msg 704 104 0;
+#X msg 866 106 1;
+#X floatatom 567 62 5 0 0 0 - - -;
+#X obj 1064 640 +~;
+#X obj 793 759 expr~ 1-$v1;
+#X obj 975 788 *~;
+#X obj 607 795 *~;
+#X obj 1036 34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1036 60 openpanel;
+#X obj 1036 120 soundfiler;
+#X obj 1104 151 expr 44100/$f1;
+#X msg 1036 90 read -resize \$1 waveTable2;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array waveTable2 353112 float 2;
+#X coords 0 1 353112 -1 200 140 1;
+#X restore 1245 39 graph;
+#X obj 728 837 +~;
+#X obj 1104 175 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0.12489 256;
+#X obj 336 212 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.12489 256;
+#X obj 758 171 line~;
+#X msg 757 142 \$1 50;
+#X floatatom 651 63 5 0 0 0 - - -;
+#X text 845 674 Il morphing tra le due tabelle può essere ottenuto
+con un CC o con un aftertouch di canale;
+#X text 1245 606 Due moduli identici. Lo stesso fasore legge entrambe
+le tabelle \, e ogni tabella viene letta due volte \, sfasata di 180
+gradi \, per mascherare l'attacco.;
+#X obj 568 508 +~ 0.5;
+#X obj 1099 510 +~ 0.5;
+#X text 705 317 Il numero 62 equivale a un RE \, che è la nota fondamentale
+della tabella.;
+#X text 706 366 L'espressione esegue la trasposizione. Se la nota suonata
+è il RE \, la trasposizione è nulla.;
+#X text 103 407 Ogni volta che arriva una nota nuoca la fase viene
+inizializzata a 0 per leggere la tabella dall'inizio.;
+#X text 1026 198 Viene letto un file audio. Il modulo soundfiler rilascia
+la dimensione in campioni della tabella. Con questo dato si calcola
+la frequenza del fasore e il fattore per riscalare il fasore stesso
+da 0-1 a 0-N. Il dato viene inviato uguale ad entrambe le tabelle per
+fare in modo che la lettura sia uniforme.;
+#X text 707 57 Un rudimentale inviluppo di ampiezza.;
+#X connect 0 0 1 0;
+#X connect 1 0 19 0;
+#X connect 2 0 3 0;
+#X connect 2 0 5 1;
+#X connect 2 0 10 1;
+#X connect 2 0 28 1;
+#X connect 2 0 22 1;
+#X connect 3 0 8 0;
+#X connect 3 0 9 1;
+#X connect 3 0 49 0;
+#X connect 5 0 17 0;
+#X connect 6 0 5 0;
+#X connect 6 0 28 0;
+#X connect 6 0 55 0;
+#X connect 6 0 56 0;
+#X connect 8 0 6 0;
+#X connect 9 0 15 0;
+#X connect 10 0 18 0;
+#X connect 11 0 10 0;
+#X connect 12 0 13 0;
+#X connect 12 0 55 1;
+#X connect 13 0 55 0;
+#X connect 14 0 9 0;
+#X connect 14 1 15 1;
+#X connect 15 0 8 0;
+#X connect 16 0 6 1;
+#X connect 17 0 20 0;
+#X connect 18 0 20 1;
+#X connect 19 0 2 0;
+#X connect 20 0 40 0;
+#X connect 21 0 7 0;
+#X connect 21 0 7 1;
+#X connect 22 0 26 0;
+#X connect 23 0 22 0;
+#X connect 24 0 25 0;
+#X connect 24 0 56 1;
+#X connect 25 0 56 0;
+#X connect 26 0 37 1;
+#X connect 27 0 37 0;
+#X connect 28 0 27 0;
+#X connect 29 0 31 0;
+#X connect 30 0 29 0;
+#X connect 31 0 38 0;
+#X connect 31 0 39 1;
+#X connect 32 0 36 0;
+#X connect 32 0 14 0;
+#X connect 32 1 33 0;
+#X connect 32 1 52 0;
+#X connect 33 0 34 0;
+#X connect 33 1 35 0;
+#X connect 34 0 51 0;
+#X connect 35 0 51 0;
+#X connect 35 0 16 0;
+#X connect 37 0 39 0;
+#X connect 38 0 40 1;
+#X connect 39 0 47 1;
+#X connect 40 0 47 0;
+#X connect 41 0 42 0;
+#X connect 42 0 45 0;
+#X connect 43 0 44 0;
+#X connect 44 0 48 0;
+#X connect 45 0 43 0;
+#X connect 47 0 21 0;
+#X connect 50 0 21 1;
+#X connect 51 0 50 0;
+#X connect 55 0 11 0;
+#X connect 56 0 23 0;
